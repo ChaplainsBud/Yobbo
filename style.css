@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body {
     margin-left: 7vw;
@@ -8,24 +13,24 @@ body {
     /* margin-left: 40px;
     margin-right: 40px; */
     display: grid;
-    grid-template-rows: repeat(16, 10vh);
+    grid-template-rows: repeat(19, 10vh);
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
     "header header header"
     "nav  nav nav"
-    "main main sidebar1"
+    "tomcat tomcat sidebar1"
     "main main sidebar2"
     "main main sidebar2"
     "main main sidebar3"
     "main main sidebar3"
     "main main sidebar4"
     "main main sidebar4"
-    "aside aside aside"
-    "aside aside aside"
-    "section section section"
-    "section section section"
-    "section section section"
-    "section section section"
+    "aside aside sidebar5"
+    "aside aside sidebar5"
+    "aside aside sidebar6"
+    "aside aside sidebar6"
+    "section section sidebar6"
+    "section section sidebar6"
     "article article article"
     "article article article"
     "footer footer footer"
@@ -37,7 +42,7 @@ body {
 header {
     
     background-color:white;
-    border: 2px dotted black;
+    /* border: 2px dotted black; */
     grid-area: header;
     display: flex;
     flex-direction: row;
@@ -63,7 +68,7 @@ a {
 
 nav {
     background-color: white;
-    border: 2px dashed gray;
+    /* border: 2px dashed gray; */
     grid-area: nav;
 }
 
@@ -79,9 +84,34 @@ main {
     grid-area: main;
 }
 
+main > img {
+    height: 300px;
+    width: 300px;
+}
+
+ img {
+    height: 100px;
+    width: 100px;
+}
+
+.box {
+    background-color: gray;
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+
 aside {
     background-color: yellow;
     grid-area: aside;
+    /* padding: 35px; */
+}
+
+aside > .card {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    /* margin: 10px; */
 }
 
 section {
@@ -94,19 +124,16 @@ article {
     grid-area: article;
 }
 
-footer {
-    background-color: black;
-    grid-area: footer;
-}
+
 
 .sidebar1 {
-    background-color: pink;
+    background-color: white;
     grid-area: sidebar1;
 }
 
 .sidebar2 {
     /* flexed the two ul's, making a better table than tablebody? */
-    background-color: palegoldenrod;
+    background-color: white;
     grid-area: sidebar2;
     display:flex;
     flex-direction: row;
@@ -114,17 +141,17 @@ footer {
 }
 
 .sidebar3 {
-    background-color: palegreen;
+    background-color: white;
     grid-area: sidebar3;
 }
 
 .sidebar4 {
-    background-color: paleturquoise;
+    background-color: white;
     grid-area: sidebar4;
 }
 
 .sidebar5 {
-    background-color: palevioletred;
+    background-color: white;
     grid-area: sidebar5;
 }
 
@@ -133,3 +160,14 @@ footer {
     grid-area: sidebar6;
 }
 
+.tomcat {
+    background-color: blue;
+    grid-area: tomcat;
+    color: white;
+}
+
+footer {
+    background-color: black;
+    grid-area: footer;
+    color: white;
+}
